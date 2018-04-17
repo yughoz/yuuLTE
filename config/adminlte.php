@@ -97,7 +97,7 @@ return [
 
     'default_group' => 2,
 
-    'users_dev' => [1,2,9],
+    'users_dev' => [1],
 
     // 'user_confirm'  => "alvianyusuf22@gmail.com",
 

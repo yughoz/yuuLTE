@@ -3,7 +3,7 @@ Yuu LTE Specs
 
 Program Include 
 -------------------------
-* laravel 5.5
+* laravel 5.6
 * [Laravel-AdminLTE](https://github.com/jeroennoten/Laravel-AdminLTE) 
 * YuuLte lib
 
@@ -12,7 +12,7 @@ Server Requirements (Laravel framework )
 The Laravel framework has a few system requirements. Of course, all of these requirements are satisfied by the Laravel Homestead virtual machine, so it's highly recommended that you use Homestead as your local Laravel development environment.
 However, if you are not using Homestead, you will need to make sure your server meets the following requirements:
 
-* PHP >= 7.0.0
+* PHP >= 7.1.3
 * OpenSSL PHP Extension
 * PDO PHP Extension
 * Mbstring PHP Extension

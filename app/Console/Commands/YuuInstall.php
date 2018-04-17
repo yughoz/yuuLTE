@@ -11,14 +11,14 @@ class YuuInstall extends Command
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'YuuInstall:refresh';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'YuuLTE Install';
 
     /**
      * Create a new command instance.
@@ -38,6 +38,21 @@ class YuuInstall extends Command
     public function handle()
     {
         //
-        echo "test";
+        $this->info('Replace Custom menus');
+        $path = base_path()."/vendor/jeroennoten/laravel-adminlte/src/Menu/Filters/GateFilter.php";
+        $pathReplace = base_path()."/packages/yuu/cutom-menus/src/GateFilter.php";
+        if (is_file($path)) {
+            if (is_file($pathReplace)) {
+                copy($pathReplace, $path);
+            }
+        }
+
+        $path = base_path()."/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesUsers.php";
+        $pathReplace = base_path()."/packages/yuu/cutom-menus/src/AuthenticatesUsers.php";
+        if (is_file($path)) {
+            if (is_file($pathReplace)) {
+                copy($pathReplace, $path);
+            }
+        }
     }
 }
